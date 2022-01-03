@@ -20,27 +20,6 @@ terraform apply
 aws --profile ${aws-profile} eks --region ap-northeast-1 update-kubeconfig --name eks-example
 ```
 
-## kube-prometheusインストール
-
-```sh
-helm repo add prometheus-community \
-    https://prometheus-community.github.io/helm-charts
-
-helm repo add stable https://charts.helm.sh/stable
-
-helm repo update
-
-helm install example prometheus-community/kube-prometheus-stack \
-    -n monitoring \
-    --create-namespace
-
-# prometheusのGUI表示
-# username:admin
-# password:prom-operator
-kubectl port-forward svc/example-grafana -n monitoring 3000:80
-open http://127.0.0.1:3000
-```
-
 ## AWS Application Load Balancer Controller
 
 ```sh
