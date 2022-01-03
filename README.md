@@ -1,5 +1,8 @@
 # eks-terraform-sample
 
+ref:https://github.com/kubernetes-sigs/aws-load-balancer-controller
+game-2048:https://hub.docker.com/r/alexwhen/docker-2048
+
 ## AWSリソース構築
 
 **以下のvariableのcreatorを任意のものに変更する**
