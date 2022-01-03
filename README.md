@@ -1,7 +1,7 @@
 # eks-terraform-sample
 
-ref:https://github.com/kubernetes-sigs/aws-load-balancer-controller
-game-2048:https://hub.docker.com/r/alexwhen/docker-2048
+- ref:https://github.com/kubernetes-sigs/aws-load-balancer-controller
+- game-2048:https://hub.docker.com/r/alexwhen/docker-2048
 
 ## AWSリソース構築
 
