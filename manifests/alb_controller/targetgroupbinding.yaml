@@ -1,0 +1,18 @@
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  name: game-2048-tgb
+  namespace: game-2048
+spec:
+  serviceRef:
+    name: service-2048
+    port: 80
+  targetGroupARN: ${TARGET_GROUP_ARN}
+  targetType: ip
+  networking:
+    ingress:
+    - from:
+      - securityGroup:
+          groupID: ${SECURITY_GROUP_ID}
+      ports:
+      - protocol: TCP
